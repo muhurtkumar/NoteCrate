@@ -47,7 +47,7 @@ const NoteState = (props)=>{
                 "auth-token": localStorage.getItem('token')
             },
         });
-        const json = response.json();
+        const json = await response.json();
         console.log(json)
         // Logic to delete note in client
         const newNotes = notes.filter((note)=>{return note._id!==id})
