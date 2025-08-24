@@ -17,8 +17,8 @@ const NoteState = (props)=>{
             },
         });
         // Logic to fetch all notes in client
-        const json = await response.json()
-        setNotes(json)
+        const json = await response.json();
+        setNotes(Array.isArray(json) ? json : []);
     }
 
     // Add a Note
